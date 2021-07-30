@@ -1,18 +1,23 @@
+
 import java.util.*;
 public class javahw6_2{
     public static void main(String[] args) {
         Random ran = new Random();
         Scanner sc = new Scanner(System.in);
-        int i;
         System.out.print("요소 수: ");
-        i = sc.nextInt();
+        int i = sc.nextInt();
         int a[] = new int[i];
-        for(int j=0;j<i;j++){
-            a[j] = ran.nextInt(10);
+        a[0] =ran.nextInt(i)+1;
+        for(int j= 1;j<i;j++){
             do{
-            System.out.println("a["+j+"] = "+a[j]);
-            }while(a[j]!=a[j]);
-            }
+                a[j] = ran.nextInt(10)+1;
+            }while(a[j]==a[j-1]);
+            
+        }
+        for(int x=0;x<i;x++){
+            System.out.println("a["+x+"] = "+ a[x]);
+        }
+        
         
     }
 }
