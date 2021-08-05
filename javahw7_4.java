@@ -5,7 +5,7 @@ public class javahw7_4{
         System.out.print("정수의 부호 판정:");
         int a = sc.nextInt();
         
-      System.out.println( Signof.signOf(a));
+      System.out.println(Signof.signOf(a));
 
     }
 
